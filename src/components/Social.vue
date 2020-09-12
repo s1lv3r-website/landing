@@ -1,5 +1,5 @@
 <template>
-  <div id="socialMedia">
+  <div id="my-social-shit">
     <ul>
       <li>
         <a href="https://github.com/ent3r">
