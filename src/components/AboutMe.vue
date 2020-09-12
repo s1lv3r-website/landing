@@ -92,14 +92,6 @@ a {
   }
 }
 
-// #container {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 100%;
-//   height: 100%;
-// }
-
 #box {
   max-width: 50%;
   border: 1px currentColor solid;
