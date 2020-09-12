@@ -16,6 +16,9 @@ export default defineComponent({
   components: {
     AboutMe: AboutMe,
     SocialMedia: Social
+  },
+  created() {
+    document.title = "ent3r_";
   }
 });
 </script>
