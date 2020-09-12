@@ -7,7 +7,7 @@
     <h1 id="username">ent3r_</h1>
     <p
       id="description"
-    >Oh hey. I'm me. I do some programming every now and then. You're probably here because you found one of the things I made. Thats cool.</p>
+    >Oh hey. I'm me. You're you. I do some programming every now and then. You're probably here because you found one of the things I made. Thats cool.</p>
   </div>
 </template>
 
