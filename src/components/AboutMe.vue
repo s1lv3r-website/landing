@@ -1,7 +1,7 @@
 <template>
   <div id="aboutMe">
     <img
-      src="http://gravatar.com/avatar/708126e718f81d89e6daffba2b153c72.png?size=200&d=retro"
+      src="https://gravatar.com/avatar/708126e718f81d89e6daffba2b153c72.png?size=200&d=retro"
       alt="My logo"
     />
     <h1 id="username">ent3r_</h1>
