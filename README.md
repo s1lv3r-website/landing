@@ -11,10 +11,10 @@ ent3r-website/landing - replace with the repo URL
     <img src="http://gravatar.com/avatar/708126e718f81d89e6daffba2b153c72.png?size=200&d=retro" alt="Logo">
   </a>
 
-  <h3 align="center">Project template</h3>
+  <h3 align="center">Landing page</h3>
 
   <p align="center">
-    A small template I use when making new projects.
+    The landing page for my website.
     <br />
     <a href="https://github.com/ent3r-website/landing/wiki"><strong>Explore the docs »</strong></a>
     <br />
