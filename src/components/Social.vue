@@ -1,5 +1,6 @@
 <template>
   <div id="my-social-shit">
+    <!-- Why is this named "my-social-shit" instead of "social-media"? simply because uBo blocks stuff with that id by default. lame, right? -->
     <ul>
       <li>
         <a href="https://github.com/ent3r">
@@ -22,7 +23,7 @@
         </a>
       </li>
       <li>
-        <a href="https://twitter.com/ent3r_">
+        <a href="https://twitter.com/s1lv3r__">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"

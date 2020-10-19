@@ -18,7 +18,7 @@ export default defineComponent({
     SocialMedia: Social
   },
   created() {
-    document.title = "ent3r_";
+    document.title = "S1LV3R";
   }
 });
 </script>
