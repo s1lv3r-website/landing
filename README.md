@@ -11,7 +11,7 @@ ent3r-website/landing - replace with the repo URL
     <img src="http://gravatar.com/avatar/708126e718f81d89e6daffba2b153c72.png?size=200&d=retro" alt="Logo">
   </a>
 
-  <h3 align="center">Landing page</h3>
+  <h1 align="center">Landing page</h1>
 
   <p align="center">
     The landing page for my website.
@@ -31,7 +31,10 @@ ent3r-website/landing - replace with the repo URL
   </a>
   <a href="https://github.com/ent3r/corax-bot-nodejs-rewrite/pulls">
       <img src="https://img.shields.io/github/issues-pr-raw/ent3r/corax-bot-nodejs-rewrite.svg">
-    </a>
+  </a>
+  <a href="https://app.netlify.com/sites/s1lv3r/deploys">
+    <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/05252f0c-abc3-487e-86d7-c8ca8e1dd6e0/deploy-status" >
+  </a>
   </div>
 </p>
 
