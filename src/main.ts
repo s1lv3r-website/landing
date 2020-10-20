@@ -1,9 +1,9 @@
-import { createApp } from "vue";
-import VueMeta from "vue-meta";
-
-const test = new VueMeta()
-
+import Vue from "vue";
 import App from "./App.vue";
 import "./registerServiceWorker";
 
-createApp(App).use(test, {}).mount("#app");
+Vue.config.productionTip = false;
+
+new Vue({
+  render: h => h(App)
+}).$mount("#app");

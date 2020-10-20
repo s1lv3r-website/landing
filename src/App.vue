@@ -7,11 +7,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import Vue from "vue";
 import AboutMe from "./components/AboutMe.vue";
 import Social from "./components/Social.vue";
 
-export default defineComponent({
+export default Vue.extend({
   name: "App",
   components: {
     AboutMe: AboutMe,
@@ -24,7 +24,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-#app {
+body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
