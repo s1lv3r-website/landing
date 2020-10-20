@@ -1,5 +1,5 @@
 {
-  "name": "landing-page",
+  "name": "s1lv3r",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,9 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "register-service-worker": "^1.7.1",
-    "vue": "^2.6.12"
+    "vue": "^2.6.12",
+    "vue-meta": "^2.4.0",
+    "vue-router": "^3.4.7"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.33.0",
