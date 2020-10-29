@@ -42,6 +42,9 @@
           </svg> Twitter
         </a>
       </li>
+      <li>
+        <a href="/discord">Discord (s1lv3r#8868)</a>
+      </li>
     </ul>
   </div>
 </template>
