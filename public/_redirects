@@ -1,3 +1,5 @@
-/discord	https://discord.com/invite/ydcjGs2
+# Discord server redirect
+/discord    https://discord.com/invite/ydcjGs2    308
 
-/*    /index.html    404
+# 404 SPA config
+/*          /index.html                           404
