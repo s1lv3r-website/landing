@@ -3,7 +3,7 @@
     <!-- Why is this named "my-social-shit" instead of "social-media"? simply because uBo blocks stuff with that id by default. lame, right? -->
     <ul>
       <li>
-        <a href="https://github.com/ent3r">
+        <a href="https://github.com/theS1LV3R">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
