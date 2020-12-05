@@ -3,6 +3,7 @@
     <h3>Links</h3>
     <ul>
       <li><a href="https://corax.team">Team Corax</a></li>
+      <li><a href="https://nerd.s1lv3r.codes">Nerd</a></li>
     </ul>
   </div>
 </template>
