@@ -3,7 +3,7 @@ import VueRouter, { RouteConfig } from "vue-router";
 
 import Home from "@/views/Home.vue";
 import Socials from "@/views/Socials.vue";
-import Projects from "@/views/Projects.vue";
+import Projects from "@/views/Links.vue";
 import NotFound from "@/views/404.vue";
 
 Vue.use(VueRouter);
@@ -20,8 +20,8 @@ const routes: Array<RouteConfig> = [
     component: Socials,
   },
   {
-    path: "/projects",
-    name: "Projects",
+    path: "/links",
+    name: "Links",
     component: Projects,
   },
   {

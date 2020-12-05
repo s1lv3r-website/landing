@@ -23,7 +23,7 @@ export default Vue.extend({
   },
 
   metaInfo: {
-    title: "Projects and repos",
+    title: "Links",
   },
 });
 </script>

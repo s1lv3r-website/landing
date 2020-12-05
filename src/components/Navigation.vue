@@ -9,7 +9,7 @@
     </li>
     |
     <li>
-      <router-link to="/projects">Projects</router-link>
+      <router-link to="/links">Links</router-link>
     </li>
   </ul>
 </template>
