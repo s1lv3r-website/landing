@@ -23,6 +23,12 @@ li {
 
 ul {
   padding: 0;
+
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
 }
 
 a {
