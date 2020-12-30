@@ -5,7 +5,6 @@ ent3r-website/landing - replace with the repo URL
  -->
 
 <!-- PROJECT LOGO -->
-<br />
 <p align="center">
   <h1 align="center">Landing page</h1>
 
