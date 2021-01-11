@@ -9,7 +9,7 @@ ent3r-website/landing - replace with the repo URL
   <h1 align="center">Landing page</h1>
 
   <p align="center">
-    The landing page for my website. Nothing special about it, it's just a static site < 10kb. Everything resides in the `src/` directory, just deploy that and you're done.
+    The landing page for my website. Nothing special about it, it's just a static site < 10kb. Everything resides in the <code>src/</code> directory, just deploy that and you're done.
 
   <br />
   </p>
