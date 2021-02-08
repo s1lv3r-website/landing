@@ -1,4 +1,4 @@
 User-agent: *
 Allow: *
-Allow: /sitemap.htm
+Allow: /sitemap.xml
 Sitemap: https://s1lv3r.codes/sitemap.xml

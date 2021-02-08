@@ -1,165 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <meta name="referrer" content="strict-origin" />
-    <meta name="robots" content="index, follow" />
+---
+layout: default
+---
 
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <title>S1LV3R</title>
+<p>
+  Hey, I'm S1LV3R. I usually do programming and CTFs, but I also enjoy talking
+  with my friends and gaming :) This website is mostly just a simple page to
+  link to other websites and stuff.
+</p>
 
-    <!-- Primary Meta Tags -->
-    <meta name="title" content="S1LV3R" />
-    <meta name="theme-color" content="#ff0000" />
-    <meta name="author" content="S1LV3R" />
-    <meta
-      name="description"
-      content="Hey, I'm S1LV3R. I usually do programming and CTFs, but I also enjoy talking with my friends and gaming. :)"
-    />
+<h2>Contact</h2>
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="S1LV3R" />
-    <meta property="og:url" content="https://s1lv3r.codes/" />
-    <meta property="og:locale" content="en_US" />
-    <meta
-      property="og:description"
-      content="Hey, I'm S1LV3R. I usually do programming and CTFs, but I also enjoy talking with my friends and gaming. :)"
-    />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary" />
-    <meta property="twitter:url" content="https://s1lv3r.codes" />
-    <meta property="twitter:title" content="S1LV3R" />
-    <meta property="twitter:creator" content="@s1lv3r__" />
-    <meta property="twitter:site" content="@s1lv3r__" />
-
-    <!-- Icons -->
-
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/img/icons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/img/icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/img/icons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/img/icons/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="/img/icons/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="msapplication-config" content="/img/icons/browserconfig.xml" />
-
-    <link
-      rel="alternate"
-      type="application/json+oembed"
-      href="https://embeds.ga/oembed/?url=https://s1lv3r.codes"
-    />
-
-    <style>
-      body {
-        font-family: sans-serif;
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 0 8px;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        html {
-          background: #1c1c1c;
-          color: white;
-        }
-        a {
-          color: #6bf;
-        }
-        a:visited {
-          color: #f8f;
-        }
-        a:active {
-          color: red;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <h1>S1LV3R</h1>
-
-    <nav><em>home</em> | <a href="/links/">links</a></nav>
-
-    <p>
-      Hey, I'm S1LV3R. I usually do programming and CTFs, but I also enjoy
-      talking with my friends and gaming :) This page is mostly just a simple
-      homepage to link to pages and stuff.
-    </p>
-
-    <h2>Contact</h2>
-
-    <table>
-      <tr>
-        <td>Email:</td>
-        <td>
-          <a
-            href="mailto:s1lv3r@corax.team"
-            target="_blank"
-            rel="noopener noreferrer"
-            >s1lv3r@corax.team</a
-          >
-        </td>
-      </tr>
-      <tr>
-        <td>GitHub:</td>
-        <td>
-          <a
-            href="https://github.com/theS1LV3R"
-            target="_blank"
-            rel="noopener noreferrer"
-            >theS1LV3R</a
-          >
-        </td>
-      </tr>
-      <tr>
-        <td>Twitter:</td>
-        <td>
-          <a
-            href="https://twitter.com/s1lv3r__"
-            target="_blank"
-            rel="noopener noreferrer"
-            >@s1lv3r__</a
-          >
-        </td>
-      </tr>
-      <tr>
-        <td>Discord:</td>
-        <td>
-          <a
-            href="https://s1lv3r.codes/discord"
-            target="_blank"
-            rel="noopener noreferrer"
-            >s1lv3r#8868</a
-          >
-        </td>
-      </tr>
-      <tr>
-        <td>PGP:</td>
-        <td>
-          85FA 2FC2 D803 5859 AE77 FF6E 6366 60BB 3A5C 2F87 (
-          <a href="/public-keys.pub">Full key</a> )
-        </td>
-      </tr>
-    </table>
-  </body>
-</html>
+<table>
+  <tr>
+    <td>Email:</td>
+    <td>
+      <a href="mailto:{{site.email}}" target="_blank" rel="noopener noreferrer"
+        >{{site.email}}</a
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>GitHub:</td>
+    <td>
+      <a
+        href="https://github.com/{{site.github_username}}"
+        target="_blank"
+        rel="noopener noreferrer"
+        >{{site.github_username}}</a
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Twitter:</td>
+    <td>
+      <a
+        href="https://twitter.com/{{site.twitter_username}}"
+        target="_blank"
+        rel="noopener noreferrer"
+        >@{{site.twitter_username}}</a
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Discord:</td>
+    <td>
+      <a
+        href="{{site.url}}/discord"
+        target="_blank"
+        rel="noopener noreferrer"
+        >{{site.discord_username}}</a
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>PGP:</td>
+    <td>
+      85FA 2FC2 D803 5859 AE77 FF6E 6366 60BB 3A5C 2F87<br />
+      ( <a href="/public-keys.pub">Full key</a> )
+    </td>
+  </tr>
+</table>

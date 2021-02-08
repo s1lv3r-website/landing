@@ -119,3 +119,10 @@ dist
 
 # Local Netlify folder
 .netlify
+
+### Jekyll ###
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor

@@ -1,0 +1,11 @@
+.active {
+  font-style: italic;
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: currentColor;
+
+  &:visited {
+    color: currentColor;
+  }
+}

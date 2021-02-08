@@ -1,0 +1,20 @@
+title: S1LV3R
+
+description: >- # this means to ignore newlines until "baseurl:"
+  Hey, I'm S1LV3R. I usually do programming and CTFs,
+  but I also enjoy talking with my friends and gaming :)
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://s1lv3r.codes" # the base hostname & protocol for your site, e.g. http://example.com
+
+email: s1lv3r@corax.team
+twitter_username: s1lv3r__
+github_username: theS1LV3R
+discord_username: s1lv3r#8868
+
+# Build settings
+plugins:
+  # - jekyll-feed
+  - jekyll-sitemap
+
+include:
+  - _redirects

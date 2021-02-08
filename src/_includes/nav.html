@@ -1,0 +1,6 @@
+{% assign current = page.url | downcase %}
+
+<nav>
+  <a href="/" class="{% if current == '/' %}active{% endif %}">home</a> |
+  <a href="/links/" class="{% if current == '/links/' %}active{% endif %}">links</a>
+</nav>
