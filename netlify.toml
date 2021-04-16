@@ -19,3 +19,8 @@
 
 [build.processing.images]
   compress = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Permissions-Policy = "interest-cohort=()"
