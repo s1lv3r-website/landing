@@ -16,7 +16,8 @@
       <img src="https://img.shields.io/github/issues-pr-raw/s1lv3r-website/landing.svg">
   </a>
   <a href="https://app.netlify.com/sites/s1lv3r/deploys">
-    <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/05252f0c-abc3-487e-86d7-c8ca8e1dd6e0/deploy-status" >
+    <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/f7d0d017-8ec3-4b62-81ca-47bbc8393229/deploy-status" >
+
   </a>
   </div>
 </p>
