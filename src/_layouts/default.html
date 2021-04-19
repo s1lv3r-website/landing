@@ -13,6 +13,9 @@
       {% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}
     </h1>
     {% include nav.html %}
-    {{ content }}
+    <main>
+      {{ content }}
+    </main>
+    {% include footer.html %}
   </body>
 </html>

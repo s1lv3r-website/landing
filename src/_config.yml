@@ -15,6 +15,7 @@ discord_username: s1lv3r#8868
 plugins:
   # - jekyll-feed
   - jekyll-sitemap
+  - jekyll-git_metadata
 
 include:
   - _redirects

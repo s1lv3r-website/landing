@@ -17,6 +17,7 @@ group :jekyll_plugins do
   #gem "jekyll-feed", "~> 0.12"  # Generate an RSS feed
   gem "jekyll-sitemap"  # Generate a sitemap
   # gem 'jekyll-seo-tag'  # Generate seo tags automatically
+  gem "jekyll-git_metadata", github: 'ctrlgroup/jekyll-git_metadata'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

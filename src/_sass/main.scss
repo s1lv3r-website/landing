@@ -1,17 +1,7 @@
-$darkBgColor: #1c1c1c;
-$darkBgTextColor: white;
-
-$lightBgColor: white;
-$lightBgTextColor: black;
-
-$bodyFont: -apple-system, BlinkMacSystemFont, sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol";
+@import "theme";
 
 body {
   font-family: $bodyFont;
-}
-
-body {
   max-width: 600px;
   margin: 0 auto;
   padding: 0 8px;
@@ -32,15 +22,6 @@ a {
   html {
     background: $darkBgColor;
     color: $darkBgTextColor;
-  }
-  a {
-    color: #6bf;
-  }
-  a:visited {
-    color: #f8f;
-  }
-  a:active {
-    color: red;
   }
 }
 
