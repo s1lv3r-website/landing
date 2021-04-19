@@ -10,6 +10,8 @@ email: s1lv3r@corax.team
 twitter_username: theS1LV3R
 github_username: theS1LV3R
 discord_username: s1lv3r#8868
+repo: s1lv3r-website/landing
+branch: master
 
 # Build settings
 plugins:
