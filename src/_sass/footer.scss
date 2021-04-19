@@ -3,4 +3,6 @@
 footer {
   color: $footerColor;
   margin-top: 1rem;
+
+  flex-shrink: 1;
 }
