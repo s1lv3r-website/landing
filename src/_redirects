@@ -1,2 +1,5 @@
 # Discord server redirect
 /discord    https://discord.gg/twfHpMqAt3
+
+# Old GPG key file name
+/public-keys.pub    /public-keys.gpg    301
