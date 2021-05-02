@@ -9,3 +9,15 @@
     color: currentColor;
   }
 }
+
+a {
+  text-decoration: none;
+
+  .octicon {
+    vertical-align: middle;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

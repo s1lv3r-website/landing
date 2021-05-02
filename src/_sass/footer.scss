@@ -5,4 +5,16 @@ footer {
   margin-top: 1rem;
 
   flex-shrink: 1;
+
+  & > a {
+    text-decoration: none;
+
+    .octicon {
+      vertical-align: baseline;
+    }
+
+    &:visited {
+      color: #6bf;
+    }
+  }
 }
