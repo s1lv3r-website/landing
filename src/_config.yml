@@ -13,6 +13,10 @@ discord_username: s1lv3r#8868
 repo: s1lv3r-website/landing
 branch: master
 
+sass:
+  style: compressed
+  sourcemap: development
+
 # Build settings
 plugins:
   # - jekyll-feed

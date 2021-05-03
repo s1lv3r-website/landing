@@ -1,7 +1,7 @@
 {%- if page.title -%}
-  {% capture title %}{{page.title}} - {{ site.title }}{% endcapture %}
+  {%- capture title -%}{{page.title}} - {{ site.title }}{%- endcapture -%}
 {%- else -%}
-  {% assign title = site.title %}
+  {%- assign title = site.title -%}
 {%- endif -%}
 
 <!-- Primary Meta Tags -->

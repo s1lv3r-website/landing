@@ -10,12 +10,12 @@
   </head>
   <body>
     <h1>
-      {% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}
+      {%- if page.title -%}{{page.title}}{%- else -%}{{site.title}}{%- endif -%}
     </h1>
-    {% include nav.html %}
+    {%- include nav.html -%}
     <main>
       {{ content }}
     </main>
-    {% include footer.html %}
+    {%- include footer.html -%}
   </body>
 </html>
