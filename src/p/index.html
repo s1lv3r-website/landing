@@ -10,7 +10,7 @@ title: Files and stuff
 <ul>
 {%- for file in site.static_files -%}
   {%- if file.path contains "/p/" -%}
-    <li><a href="{{ file.path }}">{{file.name}}</a></li>
+    <li><a href="{{file.path}}">{{file.name}}</a></li>
   {%- endif %}
 {%- endfor -%}
 </ul>
