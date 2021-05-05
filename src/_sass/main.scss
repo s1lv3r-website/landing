@@ -1,6 +1,7 @@
 @import "theme";
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -19,13 +20,24 @@ main {
 }
 
 a {
-  color: #6bf;
+  @media (prefers-color-scheme: dark) {
+    color: $darkLinkColor;
 
-  &:visited {
-    color: #f8f;
+    &:visited {
+      color: $darkLinkVisitedColor;
+    }
   }
+
+  @media (prefers-color-scheme: light) {
+    color: $lightLinkColor;
+
+    &:visited {
+      color: $lightLinkVisitedColor;
+    }
+  }
+
   &:active {
-    color: red;
+    color: $linkActiveColor;
   }
 }
 
@@ -33,16 +45,14 @@ td {
   padding-right: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
+html {
+  @media (prefers-color-scheme: dark) {
     background: $darkBgColor;
-    color: $darkBgTextColor;
+    color: $darkTextColor;
   }
-}
 
-@media (prefers-color-scheme: light) {
-  html {
+  @media (prefers-color-scheme: light) {
     background: $lightBgColor;
-    color: $lightBgTextColor;
+    color: $lightTextColor;
   }
 }

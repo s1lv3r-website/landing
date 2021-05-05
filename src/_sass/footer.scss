@@ -1,9 +1,23 @@
 @import "theme";
 
 footer {
-  color: $footerColor;
-  margin-top: 1rem;
+  @media (prefers-color-scheme: dark) {
+    color: $darkFooterTextColor;
 
+    & > a:visited {
+      color: $darkLinkColor;
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: $lightFooterTextColor;
+
+    & > a:visited {
+      color: $lightLinkColor;
+    }
+  }
+
+  margin-top: 1rem;
   flex-shrink: 1;
 
   & > a {
@@ -11,10 +25,6 @@ footer {
 
     .octicon {
       vertical-align: baseline;
-    }
-
-    &:visited {
-      color: #6bf;
     }
   }
 }
