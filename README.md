@@ -1,5 +1,13 @@
 <!--markdownlint-disable first-line-heading ol-prefix -->
 
+# NOTE
+
+This is the old version of my website, kept for archival purposes
+
+Yes i know git is a thing (obviously), but it's so i can have an `old.mydomain.tld` subdomain also
+
+---
+
 <p align="center">
   <h1 align="center">Landing page</h1>
 
