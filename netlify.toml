@@ -1,17 +1,17 @@
 [build]
-  base = "src"
-  publish = "_site"
-  command = "JEKYLL_ENV=production bundle exec jekyll build"
+  publish = "dist/"
+  command = "yarn run generate"
+  environment = { NODE_VERSION = "16.4.0" }
 
 [build.processing]
   skip_processing = false
 
 [build.processing.css]
-  bundle = true
+  bundle = false
   minify = true
 
 [build.processing.js]
-  bundle = true
+  bundle = false
   minify = true
 
 [build.processing.html]

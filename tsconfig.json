@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
+
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "removeComments": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "strict": true,
+    "noEmit": true,
+    "importsNotUsedAsValues": "preserve",
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "pretty": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    },
+
+    "types": [
+      "@nuxt/types",
+      "@nuxt/content",
+      "@types/node",
+      "@types/webpack-env",
+      "@nuxtjs/pwa",
+      "@nuxtjs/style-resources",
+      "@nuxtjs/robots",
+      "@nuxtjs/color-mode"
+    ]
+  },
+  "exclude": ["node_modules", ".nuxt", "dist"]
+}
