@@ -59,6 +59,7 @@ const config: NuxtConfig = {
     manifest: {
       lang: 'en',
     },
+    workbox: false
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
