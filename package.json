@@ -25,8 +25,8 @@
   "devDependencies": {
     "@aceforth/nuxt-optimized-images": "1.4.0",
     "@babel/eslint-parser": "^7.14.7",
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
+    "@commitlint/cli": "12.1.4",
+    "@commitlint/config-conventional": "12.1.4",
     "@nuxt/types": "2.15.7",
     "@nuxt/typescript-build": "2.1.0",
     "@nuxtjs/color-mode": "2.0.10",
