@@ -7,6 +7,8 @@
         |
         <NuxtLink to="/links/"><Octicon icon="link" /> links</NuxtLink>
         |
+        <NuxtLink to="/blog/"><Octicon icon="note" /> blog </NuxtLink>
+        |
         <NuxtLink to="/p/"><Octicon icon="file" /> content</NuxtLink>
       </nav>
 
