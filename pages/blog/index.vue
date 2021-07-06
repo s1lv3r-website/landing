@@ -21,7 +21,10 @@
           <span v-if="lastUpdatedDiffers(article)">
             | Updated on {{ formatDate(article.updatedAt) }}
           </span>
-          <span v-if="article.author"> | Written by {{ article.author }}</span>
+          <span v-if="article.tags !== []">
+            |
+            {{ article.tags.map((tag) => tag.toLowerCase()).join(', ') }}</span
+          >
         </p>
       </li>
     </ul>
