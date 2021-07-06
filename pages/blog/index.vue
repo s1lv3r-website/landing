@@ -39,13 +39,10 @@ export default Vue.extend({
   async asyncData({ $content }) {
     const articles = await $content('blog').fetch()
 
-    let tags: Array<string> | undefined = articles
-      .map(
-        (article: Record<string, any>): Array<string> =>
-          article.tags.map((tag: string) => tag.toLowerCase())
-      )
-      // @ts-ignores
-      .reduce((arr, e) => arr.concat(e))
+    let tags: Array<string> = articles.map(
+      (article: Record<string, any>): Array<string> =>
+        article.tags.map((tag: string) => tag.toLowerCase())
+    ).flat()
 
     if (!tags) {
       tags = []
