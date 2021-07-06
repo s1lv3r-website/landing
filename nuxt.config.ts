@@ -44,7 +44,6 @@ const config: NuxtConfig = {
     '@nuxtjs/eslint-module',
     '@nuxtjs/robots',
     '@aceforth/nuxt-optimized-images',
-    // '@nuxtjs/feed',
     '@nuxtjs/sitemap', // KEEP THIS AT THE END
   ],
 
@@ -85,47 +84,5 @@ const config: NuxtConfig = {
   },
 
   colorMode: { fallback: 'dark' },
-
-  async feed() {
-    const baseUrlBlog = this.sitemap.hostname + '/blog'
-    const baseLinkFeedBlog = '/feed/blog'
-    const feedFormats = {
-      rss: { type: 'rss2', file: 'rss.xml' },
-      json: { type: 'json1', file: 'feed.json' },
-    }
-    const { $content } = await import('@nuxt/content')
-
-    // @ts-ignore
-    const createFeedBlog = async function (feed) {
-      feed.options = {
-        // @ts-ignore Cuz reasons
-        title: config.head.titleTemplate(),
-        description: '',
-        link: baseUrlBlog,
-      }
-
-      const articles = await $content('blog').fetch()
-
-      articles.forEach((article: IContentDocument) => {
-        const url = `${baseUrlBlog}/${article.slug}`
-
-        feed.addItem({
-          title: article.title,
-          id: url,
-          link: url,
-          date: article.published,
-          description: article.description,
-          content: article.summary,
-          author: article.authors,
-        })
-      })
-    }
-
-    return Object.values(feedFormats).map(({ file, type }) => ({
-      path: `${baseLinkFeedBlog}/${file}`,
-      type,
-      create: createFeedBlog,
-    }))
-  },
 }
 export default config
