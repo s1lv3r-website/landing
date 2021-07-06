@@ -10,7 +10,7 @@ const config: NuxtConfig = {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: (titleChunk) =>
-      titleChunk !== '' ? `${titleChunk} | S1LV3R` : 'S1LV3R',
+      titleChunk !== 'nuxt-website' ? `${titleChunk} | S1LV3R` : 'S1LV3R',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
