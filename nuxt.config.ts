@@ -1,4 +1,3 @@
-import { IContentDocument } from '@nuxt/content/types/content'
 import type { NuxtConfig } from '@nuxt/types'
 
 const config: NuxtConfig = {
@@ -84,5 +83,9 @@ const config: NuxtConfig = {
   },
 
   colorMode: { fallback: 'dark' },
+
+  generate: {
+    fallback: "404.html"
+  }
 }
 export default config
