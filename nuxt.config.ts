@@ -1,3 +1,4 @@
+import { IContentDocument } from '@nuxt/content/types/content'
 import type { NuxtConfig } from '@nuxt/types'
 
 const config: NuxtConfig = {
@@ -59,7 +60,7 @@ const config: NuxtConfig = {
     manifest: {
       lang: 'en',
     },
-    workbox: false
+    workbox: false,
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
@@ -85,11 +86,46 @@ const config: NuxtConfig = {
 
   colorMode: { fallback: 'dark' },
 
-  // feed: [
-  //   {
-  //     path: '/feed.xml',
-  //     create,
-  //   },
-  // ],
+  async feed() {
+    const baseUrlBlog = this.sitemap.hostname + '/blog'
+    const baseLinkFeedBlog = '/feed/blog'
+    const feedFormats = {
+      rss: { type: 'rss2', file: 'rss.xml' },
+      json: { type: 'json1', file: 'feed.json' },
+    }
+    const { $content } = await import('@nuxt/content')
+
+    // @ts-ignore
+    const createFeedBlog = async function (feed) {
+      feed.options = {
+        // @ts-ignore Cuz reasons
+        title: config.head.titleTemplate(),
+        description: '',
+        link: baseUrlBlog,
+      }
+
+      const articles = await $content('blog').fetch()
+
+      articles.forEach((article: IContentDocument) => {
+        const url = `${baseUrlBlog}/${article.slug}`
+
+        feed.addItem({
+          title: article.title,
+          id: url,
+          link: url,
+          date: article.published,
+          description: article.description,
+          content: article.summary,
+          author: article.authors,
+        })
+      })
+    }
+
+    return Object.values(feedFormats).map(({ file, type }) => ({
+      path: `${baseLinkFeedBlog}/${file}`,
+      type,
+      create: createFeedBlog,
+    }))
+  },
 }
 export default config
