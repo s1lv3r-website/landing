@@ -3,7 +3,7 @@
     <h1>S1LV3R</h1>
     <div>
       <nav>
-        <NuxtLink to="/"><Octicon icon="home" /> home</NuxtLink>
+        <NuxtLink to="/" exact><Octicon icon="home" /> home</NuxtLink>
         |
         <NuxtLink to="/links/"><Octicon icon="link" /> links</NuxtLink>
         |
@@ -35,7 +35,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.nuxt-link-exact-active {
+.nuxt-link-active {
   font-style: italic;
   pointer-events: none;
   cursor: default;
