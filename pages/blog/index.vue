@@ -150,7 +150,7 @@ ul {
     cursor: pointer;
 
     &.active {
-      box-shadow: 0 0 0.1rem 0.1rem gold;
+      box-shadow: 0 0 0.1rem 0.075rem gold;
     }
   }
 }
