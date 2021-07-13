@@ -86,6 +86,7 @@ const config: NuxtConfig = {
 
   generate: {
     fallback: '404.html',
+    exclude: [/\/discord\/?/],
   },
 }
 
