@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="_template-container">
     <Header />
     <main>
       <Nuxt />
@@ -29,19 +29,40 @@ body,
   margin: 0;
 }
 
-#__layout > div {
-  font-family: $bodyFont;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 8px;
-  height: 100%;
-
+#__layout {
   display: flex;
+  align-items: center;
   flex-direction: column;
 }
 
+#_template-container {
+  font-family: $bodyFont;
+
+  max-width: 800px;
+  height: 100%;
+  margin: 0 1rem;
+  padding: 0 8px;
+
+  display: grid;
+  grid:
+    'header' auto
+    'main' 1fr
+    'footer' auto
+    / minMax(min-content, 800px);
+  grid-gap: 1rem;
+}
+
+header {
+  grid-area: header;
+}
+
 main {
+  grid-area: main;
   flex: 1 0 auto;
+}
+
+footer {
+  grid-area: footer;
 }
 
 html {
