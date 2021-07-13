@@ -5,7 +5,7 @@
         v-for="tag in tags"
         :key="tag"
         class="tag"
-        :class="{ activeTag: activeTag === tag }"
+        :class="activeTag === tag ? 'active' : ''"
         @click="setActiveTag(tag)"
       >
         {{ tag }}
