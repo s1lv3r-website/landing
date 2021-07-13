@@ -85,7 +85,8 @@ const config: NuxtConfig = {
   colorMode: { fallback: 'dark' },
 
   generate: {
-    fallback: "404.html"
-  }
+    fallback: '404.html',
+  },
 }
+
 export default config
