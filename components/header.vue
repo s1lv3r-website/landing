@@ -57,6 +57,8 @@ a {
   &:hover {
     text-decoration: underline;
   }
+
+  white-space: nowrap;
 }
 
 header > div {
