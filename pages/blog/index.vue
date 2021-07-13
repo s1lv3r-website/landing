@@ -21,7 +21,7 @@
           <span v-if="lastUpdatedDiffers(article)">
             | Updated on {{ formatDate(article.updatedAt) }}
           </span>
-          <span v-if="article.tags !== []">
+          <span v-if="Array.isArray(article.tags)">
             |
             {{ article.tags.map((tag) => tag.toLowerCase()).join(', ') }}</span
           >
@@ -39,10 +39,14 @@ export default Vue.extend({
   async asyncData({ $content }) {
     const articles = await $content('blog').fetch()
 
-    let tags: Array<string> = articles.map(
-      (article: Record<string, any>): Array<string> =>
-        article.tags.map((tag: string) => tag.toLowerCase())
-    ).flat()
+    let tags: Array<string> = articles
+      // @ts-ignore
+      .filter((article) => Array.isArray(article.tags))
+      .map(
+        (article: Record<string, any>): Array<string> =>
+          article.tags.map((tag: string) => tag.toLowerCase())
+      )
+      .flat()
 
     if (!tags) {
       tags = []
