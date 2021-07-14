@@ -4,7 +4,7 @@
     <p>Create an issue on the GitHub repo for any takedown requests</p>
 
     <ul>
-      <li v-for="video in videos" :key="video">
+      <li v-for="file in files" :key="file">
         <a :href="`/files/${video.slice(2)}`">{{ video.slice(2) }}</a>
       </li>
     </ul>
@@ -17,12 +17,12 @@ import Vue from 'vue'
 export default Vue.extend({
   data() {
     return {
-      videos: require.context('@/static/files', true, /^.*$/, 'sync').keys(),
+      files: require.context('@/static/files', true, /^.*$/, 'sync').keys(),
     }
   },
 
   head: {
-    title: 'Content',
+    title: 'Files',
   },
 })
 </script>
