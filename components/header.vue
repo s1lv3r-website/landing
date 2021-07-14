@@ -9,7 +9,7 @@
         |
         <NuxtLink to="/blog/"><Octicon icon="note" /> blog </NuxtLink>
         |
-        <NuxtLink to="/p/"><Octicon icon="file" /> files</NuxtLink>
+        <NuxtLink to="/files/"><Octicon icon="file" /> files</NuxtLink>
       </nav>
 
       <div id="theme-select">
