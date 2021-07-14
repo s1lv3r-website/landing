@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtLink :to="previousLink"><Octicon icon="arrow-left" /> Back</NuxtLink>
+    <NuxtLink to="/blog"><Octicon icon="arrow-left" /> Back</NuxtLink>
     <article>
       <h1>{{ article.title }}</h1>
       <nuxt-content :document="article" />
@@ -10,6 +10,17 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import Prism from 'prismjs'
+
+// #region PrismJS plugins
+import 'prismjs/plugins/toolbar/prism-toolbar.min.js'
+
+import 'prismjs/plugins/line-numbers/prism-line-numbers.min.js'
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
+
+import 'prismjs/plugins/line-highlight/prism-line-highlight.min.js'
+import 'prismjs/plugins/line-highlight/prism-line-highlight.css'
+// #endregion
 
 import Octicon from '~/components/octicon.vue'
 
@@ -22,8 +33,8 @@ export default Vue.extend({
     return { article }
   },
 
-  data() {
-    return { previousLink: '/blog' }
+  mounted() {
+    Prism.highlightAll()
   },
 })
 </script>

@@ -33,6 +33,7 @@
       "@nuxt/types",
       "@nuxt/content",
       "@types/node",
+      "@types/prismjs",
       "@types/webpack-env",
       "@nuxtjs/pwa",
       "@nuxtjs/style-resources",
