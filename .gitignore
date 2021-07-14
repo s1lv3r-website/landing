@@ -88,3 +88,8 @@ sw.*
 
 # Vim swap files
 *.swp
+
+### Own stuff
+
+# Testing file for testing posts and stuff
+content/blog/demo.md
