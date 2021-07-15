@@ -5,7 +5,7 @@
 
     <ul>
       <li v-for="file in files" :key="file">
-        <a :href="`/files/${video.slice(2)}`">{{ video.slice(2) }}</a>
+        <a :href="`/files/${file.slice(2)}`">{{ file.slice(2) }}</a>
       </li>
     </ul>
   </div>
