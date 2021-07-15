@@ -38,7 +38,8 @@
       "@nuxtjs/pwa",
       "@nuxtjs/style-resources",
       "@nuxtjs/robots",
-      "@nuxtjs/color-mode"
+      "@nuxtjs/color-mode",
+      "nuxt-build-optimisations"
     ]
   },
   "exclude": ["node_modules", ".nuxt", "dist"]

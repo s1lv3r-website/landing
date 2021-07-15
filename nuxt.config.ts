@@ -44,6 +44,7 @@ const config: NuxtConfig = {
     '@nuxtjs/robots',
     '@aceforth/nuxt-optimized-images',
     '@nuxtjs/fontawesome',
+    'nuxt-build-optimisations',
     '@nuxtjs/sitemap', // KEEP THIS AT THE END
   ],
 
@@ -99,6 +100,10 @@ const config: NuxtConfig = {
   fontawesome: {
     component: 'Fa',
     suffix: true,
+  },
+
+  buildOptimisations: {
+    profile: process.env.NODE_ENV === 'development' ? 'risky' : 'experimental',
   },
 }
 
