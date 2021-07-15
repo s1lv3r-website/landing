@@ -43,6 +43,7 @@ const config: NuxtConfig = {
     '@nuxtjs/eslint-module',
     '@nuxtjs/robots',
     '@aceforth/nuxt-optimized-images',
+    '@nuxtjs/fontawesome',
     '@nuxtjs/sitemap', // KEEP THIS AT THE END
   ],
 
@@ -93,6 +94,11 @@ const config: NuxtConfig = {
   generate: {
     fallback: '404.html',
     exclude: [/\/discord\/?/],
+  },
+
+  fontawesome: {
+    component: 'Fa',
+    suffix: true,
   },
 }
 

@@ -91,6 +91,11 @@ html {
       }
     }
   }
+
+  &.light-mode,
+  &.dark-mode {
+    transition: linear 150ms;
+  }
 }
 
 a:active {
