@@ -1,4 +1,6 @@
-export default (_, inject) => {
+import { Plugin } from '@nuxt/types'
+
+const pluginFunction: Plugin = (_, inject) => {
   inject('globalVars', {
     email: 's1lv3r@corax.team',
     github_username: 'theS1LV3R',
@@ -9,3 +11,5 @@ export default (_, inject) => {
     branch: 'master',
   })
 }
+
+export default pluginFunction
