@@ -1,70 +1,60 @@
 <template>
-  <div v-if="articles.length > 0" class="wrapper">
-    <div class="tags">
-      <p
-        v-for="tag in tags"
-        :key="tag"
-        class="tag"
-        :class="activeTag === tag ? 'active' : ''"
-        @click="setActiveTag(tag)"
-      >
-        {{ tag }}
-      </p>
+  <div class="wrapper">
+    <div class="filter">
+      <h2>Filter</h2>
+      <div class="search">
+        <label for="search">Search</label>
+        <input
+          id="search"
+          v-model="searchQuery"
+          type="search"
+          autocomplete="off"
+        />
+      </div>
+      <div v-if="tags && tags.length > 0" class="tags-wrapper">
+        <h3>Tags</h3>
+        <div class="tags">
+          <p
+            v-for="tag in tags"
+            :key="tag"
+            class="tag"
+            :class="activeTag === tag ? 'active' : ''"
+            @click="setActiveTag(tag)"
+          >
+            {{ tag }}
+          </p>
+        </div>
+      </div>
     </div>
-
-    <ul>
-      <li v-for="monthYear in articlesByMonthYear" :key="monthYear.monthYear">
-        <h2>
-          <span class="month-year--month">{{ monthYear.month }}</span>
-          <span class="month-year--year">- {{ monthYear.year }}</span>
-        </h2>
-        <hr />
-        <ul>
-          <li v-for="article in monthYear.articles" :key="article.url">
-            <h2 class="blog-title">
-              <NuxtLink :to="`/blog/${article.slug}`">{{
-                article.title
-              }}</NuxtLink>
-            </h2>
-            <p class="blog-meta">
-              {{ formatDate(article.date) }}
-              <span v-if="lastUpdatedDiffers(article)">
-                | Updated on {{ formatDate(article.date) }}
-              </span>
-              <span
-                v-if="Array.isArray(article.tags) && article.tags.length > 0"
-              >
-                |
-                {{
-                  article.tags.map((tag) => tag.toLowerCase()).join(', ')
-                }}</span
-              >
-            </p>
-          </li>
-        </ul>
-      </li>
-    </ul>
+    <hr />
+    <h2>Posts</h2>
+    <div v-if="articles.length > 0">
+      <ul class="month-list">
+        <li v-for="monthYear in articlesByMonthYear" :key="monthYear.monthYear">
+          <h3>
+            <span class="month-year--month">{{ monthYear.month }}</span>
+            <span class="month-year--year">- {{ monthYear.year }}</span>
+          </h3>
+          <ul class="post-list">
+            <Article
+              v-for="_article in monthYear.articles"
+              :key="_article.url"
+              :article="_article"
+            />
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <p v-else-if="searchQuery && searchQuery !== ''">No search results</p>
+    <p v-else>There are no posts here yet! Come back later</p>
   </div>
-  <p v-else>There are no posts here yet! Come back later</p>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
-interface IContentDocument extends Record<string, any> {
-  dir: string
-  path: string
-  extension: '.md' | '.json' | '.yaml' | '.xml' | '.csv' | string
-  slug: string
-  createdAt: Date
-  updatedAt: Date
-}
-
-interface BlogPost extends IContentDocument {
-  title: string
-  date: string
-  tags?: Array<string>
-}
+import { BlogPost } from '@/types/article.d'
+import Article from '~/components/blog/article.vue'
 
 const MONTHS: { [key: string]: number } = {
   JANUARY: 0,
@@ -81,43 +71,56 @@ const MONTHS: { [key: string]: number } = {
   DECEMBER: 11,
 }
 
+function processArticles(articles: Array<BlogPost>) {
+  let tags: Array<string> = articles
+    // @ts-ignore
+    .filter((article) => Array.isArray(article.tags))
+    .map(
+      (article: Record<string, any>): Array<string> =>
+        article.tags.map((tag: string) => tag.toLowerCase())
+    )
+    .flat()
+
+  if (!tags) {
+    tags = []
+  }
+
+  // ? Remove duplicates
+  // ? See https://stackoverflow.com/questions/9229645/
+  tags = [...new Set(tags.map((tag) => tag.toLowerCase()))]
+
+  return { articles, tags }
+}
+
 export default Vue.extend({
+  components: { Article },
   async asyncData({ $content }) {
-    const articles = await $content('blog').fetch()
+    const articles = (await $content('blog').fetch()) as unknown as Array<BlogPost>
 
-    let tags: Array<string> = articles
-      // @ts-ignore
-      .filter((article) => Array.isArray(article.tags))
-      .map(
-        (article: Record<string, any>): Array<string> =>
-          article.tags.map((tag: string) => tag.toLowerCase())
-      )
-      .flat()
-
-    if (!tags) {
-      tags = []
-    }
-
-    // ? Remove duplicates
-    // ? See https://stackoverflow.com/questions/9229645/
-    tags = [...new Set(tags.map((tag) => tag.toLowerCase()))]
-
-    return { articles, tags }
+    return processArticles(articles)
   },
 
   data() {
-    return { activeTag: this.$route.query?.tag ? this.$route.query.tag : '' }
+    const articles: Array<BlogPost> = []
+    const tags: Array<string> = []
+
+    return {
+      activeTag: (this.$route.query.tag ?? null) as string,
+      searchQuery: (this.$route.query.search ?? null) as string,
+      articles,
+      tags,
+    }
   },
 
   computed: {
     filteredArticles(): Array<BlogPost> {
-      if (this.activeTag !== '') {
-        // @ts-ignore
-        return this.articles.filter((article) =>
-          article.tags
+      if (this.activeTag && this.activeTag !== '') {
+        return this.articles.filter((article) => {
+          if (!(article.tags?.length && article.tags.length > 0)) return false
+          return article.tags
             .map((tag: string) => tag.toLowerCase())
             .includes(this.activeTag)
-        )
+        })
       } else {
         // @ts-ignore
         return this.articles
@@ -175,25 +178,37 @@ export default Vue.extend({
     },
   },
 
+  watch: {
+    async searchQuery(searchQuery: string) {
+      if (!searchQuery || searchQuery === '') {
+        this.articles = processArticles(
+          await this.$content('blog').fetch()
+        ).articles
+        this.$router.push({
+          query: { ...this.$route.query, searchQuery: undefined },
+        })
+        return
+      }
+
+      this.$router.push({ query: { ...this.$route.query, searchQuery } })
+      this.articles = await this.$content('blog')
+        .sortBy('createdAt', 'asc')
+        .limit(12)
+        .search(searchQuery)
+        .fetch()
+    },
+  },
+
   methods: {
-    // @ts-ignore
-    lastUpdatedDiffers(article) {
-      return article.date !== article.updatedAt
-    },
-    formatDate(dateString: string) {
-      return new Date(dateString).toLocaleDateString('en-US', {
-        month: 'long',
-        day: 'numeric',
-        year: 'numeric',
-      })
-    },
     setActiveTag(tag: string) {
       if (this.activeTag === tag) {
         this.activeTag = ''
-        this.$router.push({ query: {} })
+        this.$router.push({ query: { ...this.$route.query, tag: undefined } })
       } else {
         this.activeTag = tag
-        this.$router.push({ query: { tag: this.activeTag } })
+        this.$router.push({
+          query: { ...this.$route.query, tag: this.activeTag },
+        })
       }
     },
   },
@@ -270,6 +285,18 @@ ul {
 .month-year {
   &--year {
     font-size: 1.25rem;
+  }
+}
+
+.post-list > li {
+  padding-left: 1.5rem;
+}
+
+#searchButtonLink {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
 </style>

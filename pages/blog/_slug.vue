@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtLink to="/blog"><Octicon icon="arrow-left" /> Back</NuxtLink>
+    <a @click.prevent="$router.go(-1)"><Octicon icon="arrow-left" /> Back</a>
     <article>
       <h1>{{ article.title }}</h1>
       <nuxt-content :document="article" />
