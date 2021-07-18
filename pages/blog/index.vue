@@ -30,7 +30,10 @@
     <h2>Posts</h2>
     <div v-if="articles.length > 0">
       <ul class="month-list">
-        <li v-for="monthYear in articlesByMonthYear" :key="monthYear.monthYear">
+        <li
+          v-for="monthYear in articlesByMonthYear"
+          :key="`${monthYear.month}-${monthYear.year}`"
+        >
           <h3>
             <span class="month-year--month">{{ monthYear.month }}</span>
             <span class="month-year--year">- {{ monthYear.year }}</span>
