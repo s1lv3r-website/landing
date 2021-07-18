@@ -104,6 +104,7 @@ const config: NuxtConfig = {
 
   buildOptimisations: {
     profile: process.env.NODE_ENV === 'development' ? 'risky' : 'experimental',
+    features: { esbuildLoader: true },
   },
 }
 
