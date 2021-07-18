@@ -19,7 +19,7 @@
 <script lang="ts">
 import Vue from 'vue'
 
-import { BlogPost } from "@/types/article.d"
+import { BlogPost } from "@/types/article"
 
 export default Vue.extend({
   props: {

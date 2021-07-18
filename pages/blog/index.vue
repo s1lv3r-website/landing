@@ -56,7 +56,7 @@
 <script lang="ts">
 import Vue from 'vue'
 
-import { BlogPost } from '@/types/article.d'
+import { BlogPost } from '@/types/article'
 import Article from '~/components/blog/article.vue'
 
 const MONTHS: { [key: string]: number } = {

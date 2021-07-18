@@ -4,7 +4,7 @@ export interface IContentDocument extends Record<string, any> {
   extension: '.md' | '.json' | '.yaml' | '.xml' | '.csv' | string
   slug: string
   createdAt: Date
-  updatedAt: String
+  updatedAt: string
 }
 
 export interface BlogPost extends IContentDocument {
