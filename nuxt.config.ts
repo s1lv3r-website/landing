@@ -33,6 +33,7 @@ const config: NuxtConfig = {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    'nuxt-build-optimisations',
     '@nuxtjs/style-resources',
     '@nuxtjs/color-mode',
     // https://go.nuxtjs.dev/pwa
@@ -44,7 +45,6 @@ const config: NuxtConfig = {
     '@nuxtjs/robots',
     '@aceforth/nuxt-optimized-images',
     '@nuxtjs/fontawesome',
-    'nuxt-build-optimisations',
     '@nuxtjs/sitemap', // KEEP THIS AT THE END
   ],
 
