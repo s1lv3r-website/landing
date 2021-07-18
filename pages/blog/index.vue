@@ -98,7 +98,9 @@ function processArticles(articles: Array<BlogPost>) {
 export default Vue.extend({
   components: { Article },
   async asyncData({ $content }) {
-    const articles = (await $content('blog').fetch()) as unknown as Array<BlogPost>
+    const articles = (await $content(
+      'blog'
+    ).fetch()) as unknown as Array<BlogPost>
 
     return processArticles(articles)
   },
