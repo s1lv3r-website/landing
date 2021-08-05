@@ -15,7 +15,7 @@
   "dependencies": {
     "@nuxt/content": "1.14.0",
     "@nuxtjs/pwa": "3.3.5",
-    "@nuxtjs/style-resources": "1.2.0",
+    "@nuxtjs/style-resources": "1.2.1",
     "@primer/octicons": "15.0.0",
     "core-js": "3.16.0",
     "node-sass": "6.0.1",
