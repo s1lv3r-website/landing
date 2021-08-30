@@ -93,3 +93,4 @@ sw.*
 
 # Testing file for testing posts and stuff
 content/blog/demo.md
+.cloudflareconfig.yml
