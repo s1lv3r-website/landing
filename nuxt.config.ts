@@ -1,5 +1,26 @@
 import type { NuxtConfig } from '@nuxt/types'
 
+const metaData = {
+  url: 's1lv3r.codes',
+  title: 'S1LV3R',
+  description:
+    "Hey, I'm S1LV3R. I usually do programming and CTFs, but I also enjoy talking with my friends and gaming :)",
+  email: 's1lv3r@corax.team',
+  theme: '#B00B69',
+  author: 'S1LV3R',
+  locale: 'en_US',
+  socials: {
+    twitter: 'theS1LV3R',
+    github: 'theS1LV3R',
+    discord: 'Join my server',
+    matrix: '@s1lv3r:matrix.org',
+  },
+  git: {
+    repo: 's1lv3r-website/landing',
+    branch: 'master',
+  },
+}
+
 const config: NuxtConfig = {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: true,
@@ -10,12 +31,35 @@ const config: NuxtConfig = {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: (titleChunk) =>
-      titleChunk !== 'nuxt-website' ? `${titleChunk} | S1LV3R` : 'S1LV3R',
+      titleChunk !== 'nuxt-website'
+        ? `${titleChunk} | S1LV3R`
+        : "S1LV3R",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
+
+      // # Region metadata
+      { name: 'title', content: metaData.title },
+      { name: 'theme-color', content: metaData.theme },
+      { name: 'author', content: metaData.author },
+      {
+        hid: 'description',
+        name: 'description',
+        content: metaData.description,
+      },
+
+      { property: 'og:type', content: 'website' },
+      { property: 'og:title', content: metaData.title },
+      { property: 'og:url', content: `https://${metaData.url}` },
+      { property: 'og:locale', content: metaData.locale },
+      { property: 'og:description', content: metaData.description },
+
+      { property: 'twitter:card', content: 'summary' },
+      { property: 'twitter:url', content: `https://${metaData.url}` },
+      { property: 'twitter:title', content: metaData.title },
+      { property: 'twitter:creator', content: `@${metaData.socials.twitter}` },
+      { property: 'twitter:site', content: `@${metaData.socials.twitter}` },
     ],
     link: [{ rel: 'icon', type: 'image/png', href: '/icon.png' }],
   },
