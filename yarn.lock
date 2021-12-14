@@ -1719,10 +1719,10 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.20.tgz#111b5db0f501aa89b05076fa31f0ea0e0c292cd3"
   integrity sha512-88p7+M0QGxKpmnkfXjS4V26AnoC/eiqZutE8GLdaI5X12NY75bXSdTY9NkmYb2Xyk1O+MmkuO6Frmsj84V6I8Q==
 
-"@primer/octicons@16.1.1":
-  version "16.1.1"
-  resolved "https://registry.yarnpkg.com/@primer/octicons/-/octicons-16.1.1.tgz#2f4c261952221ae62640fe35bc9ccee65dc70947"
-  integrity sha512-qlMErXg4I7oOofP4d5GceLbNpjTRSkyLoe5Ng1mfebtTvjeBj8x+kdqgwFWLRp7QO1ye5AaxcCvn1AJMAeURzw==
+"@primer/octicons@16.2.0":
+  version "16.2.0"
+  resolved "https://registry.yarnpkg.com/@primer/octicons/-/octicons-16.2.0.tgz#70d9a275f076171794ebdf652cb1b351811dcfbf"
+  integrity sha512-GMwiKSRuYOCPJpRBtiY+Myfp2DWSjnjaettrl9y4TsWfMk42osYhxEOFZkU2QZT2hAULaVvCqH2zFd+3Ybg4cg==
   dependencies:
     object-assign "^4.1.1"
 
