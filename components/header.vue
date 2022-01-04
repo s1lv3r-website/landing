@@ -107,6 +107,7 @@ header {
   border-radius: 9999px;
   padding: 0.35rem;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 :root {
