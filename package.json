@@ -23,7 +23,7 @@
     "nuxt-build-optimisations": "1.0.7",
     "prism-themes": "1.9.0",
     "prismjs": "1.25.0",
-    "sass-loader": "10.2.0"
+    "sass-loader": "12.4.0"
   },
   "devDependencies": {
     "@aceforth/nuxt-optimized-images": "1.4.0",
