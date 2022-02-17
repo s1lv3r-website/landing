@@ -91,6 +91,9 @@ html {
       }
     }
   }
+
+  font-weight: $bodyFontWeight;
+  font-size: $bodyFontSize;
 }
 
 a:active {

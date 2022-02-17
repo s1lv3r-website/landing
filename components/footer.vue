@@ -1,9 +1,9 @@
 <template>
   <footer>
-    <a :href="url" target="_blank" rel="noopener noreferrer">
+    <!--    <a :href="url" target="_blank" rel="noopener noreferrer">
       <Octicon icon="pencil" /> Edit on GitHub!
     </a>
-    <!-- <p>
+    <p>
       Last commit: <code>{{$gitInfo.shorthash}}</code> - <code></code> <br />
       Commit date:
     </p> -->
@@ -20,9 +20,7 @@ export default Vue.extend({
 
   computed: {
     url() {
-      // @ts-ignore
       return `https://github.com/${this.$globalVars.repo}/blob/${
-        // @ts-ignore
         this.$globalVars.branch
       }/pages/${
         this.$route.path.slice(-1) === '/' ? 'index' : this.$route.path

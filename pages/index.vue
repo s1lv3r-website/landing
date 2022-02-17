@@ -3,12 +3,11 @@
     <p>
       Hey, I'm S1LV3R. I usually do programming and CTFs, but I also enjoy
       talking with my friends and gaming :) This website is mostly just a simple
-      page to link to other websites and stuff.
+      page to link to other websites and stuff.<span id="cursor">|</span>
     </p>
-    <p>🏳️‍🌈 Bisexual, they/them</p>
+    <p>🏳️‍🌈 Bisexual, she/they</p>
 
     <Contact />
-    <Donate />
   </div>
 </template>
 
@@ -16,10 +15,9 @@
 import Vue from 'vue'
 
 import Contact from '@/components/index/contact.vue'
-import Donate from '@/components/index/donate.vue'
 
 export default Vue.extend({
-  components: { Contact, Donate },
+  components: { Contact },
 
   layout: 'default',
 
@@ -28,3 +26,15 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style lang="scss" scoped>
+#cursor {
+  animation: blinker 1.5s cubic-bezier(0.43, 0.34, 0, 1) infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+</style>

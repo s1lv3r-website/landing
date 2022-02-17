@@ -1,7 +1,7 @@
 [build]
   publish = "dist/"
   command = "yarn run generate"
-  environment = { NODE_VERSION = "16.4.0" }
+  environment = { NODE_VERSION = "16.14.0" }
 
 [build.processing]
   skip_processing = false

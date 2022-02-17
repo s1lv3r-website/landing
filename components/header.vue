@@ -3,15 +3,13 @@
     <h1>S1LV3R</h1>
     <div id="flex-right">
       <div id="theme-select" @click="cycleTheme">
-        <fa-icon :icon="themeButtons[activeTheme].icon"></fa-icon>
+        <component :is="themeButtons[activeTheme].icon" id="theme-icon"></component>
         <p>{{ themeButtons[activeTheme].theme }}</p>
       </div>
       <nav>
         <NuxtLink to="/" exact><Octicon icon="home" /> home</NuxtLink>
         |
         <NuxtLink to="/links/"><Octicon icon="link" /> links</NuxtLink>
-        |
-        <NuxtLink to="/blog/"><Octicon icon="note" /> blog </NuxtLink>
         |
         <NuxtLink to="/files/"><Octicon icon="file" /> files</NuxtLink>
       </nav>
@@ -22,9 +20,10 @@
 <script lang="ts">
 import Vue from 'vue'
 
-import { faLaptop, faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
-
 import Octicon from '@/components/octicon.vue'
+import laptop from '@/assets/icons/laptop.svg?inline'
+import moon from '@/assets/icons/moon.svg?inline'
+import sun from '@/assets/icons/sun.svg?inline'
 
 export default Vue.extend({
   components: { Octicon },
@@ -32,9 +31,9 @@ export default Vue.extend({
   data() {
     return {
       themeButtons: [
-        { icon: faLaptop, theme: 'System' },
-        { icon: faMoon, theme: 'Dark' },
-        { icon: faSun, theme: 'Light' },
+        { icon: laptop, theme: 'System' },
+        { icon: moon, theme: 'Dark' },
+        { icon: sun, theme: 'Light' },
       ],
       activeTheme: 0,
     }
@@ -108,6 +107,11 @@ header {
   padding: 0.35rem;
   white-space: nowrap;
   cursor: pointer;
+
+  #theme-icon {
+    max-height: 1rem;
+    display: inline;
+  }
 }
 
 :root {

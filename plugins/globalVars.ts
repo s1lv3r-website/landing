@@ -1,6 +1,28 @@
 import { Plugin } from '@nuxt/types'
 
-const vars = {
+export type globalVars = {
+  email: string
+  github_username: string
+  twitter_username: string
+  discord_username: string
+  matrix_username: string
+  repo: string
+  branch: string
+}
+
+declare module '@nuxt/types' {
+  interface Context {
+    $globalVars: globalVars
+  }
+}
+
+declare module 'vue/types/vue' {
+  interface Vue {
+    $globalVars: globalVars
+  }
+}
+
+const vars: globalVars = {
   email: 's1lv3r@corax.team',
   github_username: 'theS1LV3R',
   twitter_username: 'theS1LV3R',
@@ -8,12 +30,6 @@ const vars = {
   matrix_username: '@s1lv3r:matrix.org',
   repo: 's1lv3r-website/landing',
   branch: 'master',
-}
-
-declare module '@nuxt/types' {
-  interface Context {
-    $globalVars: typeof vars
-  }
 }
 
 const pluginFunction: Plugin = (_, inject) => {

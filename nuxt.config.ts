@@ -82,13 +82,11 @@ const config: NuxtConfig = {
     '@nuxtjs/color-mode',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content',
     '@nuxtjs/netlify-files',
     '@nuxtjs/eslint-module',
     '@nuxtjs/robots',
     '@aceforth/nuxt-optimized-images',
-    '@nuxtjs/fontawesome',
+    '@nuxtjs/svg',
     '@nuxtjs/sitemap', // KEEP THIS AT THE END
   ],
 
@@ -132,6 +130,7 @@ const config: NuxtConfig = {
 
   optimizedImages: {
     optimizeImages: true,
+    handleImages: ['jpeg', 'png', 'webp', 'gif'],
   },
 
   colorMode: { fallback: 'dark' },
@@ -139,11 +138,6 @@ const config: NuxtConfig = {
   generate: {
     fallback: '404.html',
     exclude: [/\/discord\/?/],
-  },
-
-  fontawesome: {
-    component: 'Fa',
-    suffix: true,
   },
 
   buildOptimisations: {

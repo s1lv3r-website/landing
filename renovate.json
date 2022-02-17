@@ -1,19 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
-  "baseBranches": ["master"],
-  "schedule": ["at any time"],
-  "dependencyDashboard": true,
-  "packageRules": [
-    {
-      "matchUpdateTypes": [
-        "minor",
-        "patch",
-        "pin",
-        "digest",
-        "lockFileMaintenance"
-      ],
-      "automerge": true
-    }
+  "extends": [
+    "config:base",
+    "github>theS1LV3R/typescript-template:renovate"
   ]
 }

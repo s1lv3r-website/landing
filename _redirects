@@ -3,5 +3,3 @@
 
 # Old GPG key file name
 /public-keys.pub    /public-keys.gpg    301
-
-/p/*    /files/:splat   301

@@ -4,17 +4,6 @@
     <table>
       <tbody>
         <tr>
-          <td>Email</td>
-          <td>
-            <a
-              :href="`mailto:${$globalVars.email}`"
-              target="_blank"
-              rel="noopener noreferrer"
-              >{{ $globalVars.email }}</a
-            >
-          </td>
-        </tr>
-        <tr>
           <td>GitHub</td>
           <td>
             <a

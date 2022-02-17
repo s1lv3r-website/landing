@@ -17,5 +17,7 @@ $lightLinkVisitedColor: hsl(300, 100%, 41%);
 // #endregion
 $linkActiveColor: #B00B69;
 
-$bodyFont: -apple-system, BlinkMacSystemFont, 'Noto Sans', sans-serif, "Apple Color Emoji",
+$bodyFont: -apple-system, BlinkMacSystemFont, monospace, "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol";
+$bodyFontWeight: 400;
+$bodyFontSize: 1.01rem;

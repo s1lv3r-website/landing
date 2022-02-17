@@ -32,16 +32,16 @@
     "types": [
       "@nuxt/types",
       "@nuxt/typescript-build",
-      "@nuxt/content",
       "@types/node",
-      "@types/prismjs",
       "@types/webpack-env",
       "@nuxtjs/pwa",
       "@nuxtjs/style-resources",
       "@nuxtjs/robots",
       "@nuxtjs/color-mode",
+      "@nuxtjs/svg",
+      "./@types/custom.d.ts",
       "nuxt-build-optimisations"
-    ]
+    ],
   },
-  "exclude": ["node_modules", ".nuxt", "dist"]
+  "exclude": ["node_modules", ".nuxt", "dist"],
 }
