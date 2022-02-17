@@ -3,7 +3,10 @@
     <h1>S1LV3R</h1>
     <div id="flex-right">
       <div id="theme-select" @click="cycleTheme">
-        <component :is="themeButtons[activeTheme].icon" id="theme-icon"></component>
+        <component
+          :is="themeButtons[activeTheme].icon"
+          id="theme-icon"
+        ></component>
         <p>{{ themeButtons[activeTheme].theme }}</p>
       </div>
       <nav>
@@ -91,6 +94,7 @@ header {
 #flex-right {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 
   & > * {
     margin: auto 0.25rem;
@@ -98,9 +102,11 @@ header {
 }
 
 #theme-select {
-  & > p {
-    display: inline;
-  }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; /* prevents wrapping of the text and icon */
+  justify-content: space-evenly; // aligns horizontally
+  align-items: center; // aligns vertically
 
   margin: auto 0.5rem;
   border-radius: 9999px;
@@ -109,8 +115,12 @@ header {
   cursor: pointer;
 
   #theme-icon {
-    max-height: 1rem;
+    height: 1rem;
     display: inline;
+  }
+
+  * {
+    margin: 0 0.2rem;
   }
 }
 

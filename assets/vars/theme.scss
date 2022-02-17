@@ -15,9 +15,14 @@ $lightFooterTextColor: hsl(0, 0%, 35%);
 $lightLinkColor: hsl(207, 100%, 42%);
 $lightLinkVisitedColor: hsl(300, 100%, 41%);
 // #endregion
-$linkActiveColor: #B00B69;
+$linkActiveColor: #b00b69;
 
-$bodyFont: -apple-system, BlinkMacSystemFont, monospace, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol";
+@font-face {
+  font-family: 'Consolas';
+  src: local('Consolas') url('/fonts/consolas.ttf') format('truetype');
+}
+
+$bodyFont: 'Consolas', -apple-system, BlinkMacSystemFont, monospace, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol';
 $bodyFontWeight: 400;
-$bodyFontSize: 1.01rem;
+$bodyFontSize: 1.1rem;

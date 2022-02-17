@@ -35,9 +35,11 @@ body,
   flex-direction: column;
 }
 
-#_template-container {
+body {
   font-family: $bodyFont;
+}
 
+#_template-container {
   max-width: 800px;
   height: 100%;
   margin: 0 1rem;

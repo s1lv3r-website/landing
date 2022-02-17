@@ -3,7 +3,7 @@
     <p>
       Hey, I'm S1LV3R. I usually do programming and CTFs, but I also enjoy
       talking with my friends and gaming :) This website is mostly just a simple
-      page to link to other websites and stuff.<span id="cursor">|</span>
+      page to link to other websites and stuff. <span id="cursor">▌</span>
     </p>
     <p>🏳️‍🌈 Bisexual, she/they</p>
 

@@ -55,3 +55,20 @@
     </table>
   </div>
 </template>
+
+<style lang="scss" scoped>
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  td,
+  tr {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+  }
+
+  td:first-child {
+    font-weight: bold;
+  }
+}
+</style>

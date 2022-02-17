@@ -5,7 +5,6 @@
 
 <script lang="ts">
 import Vue from 'vue'
-// @ts-ignore I wont bother creating typings
 // See https://primer.style/octicons/packages/javascript
 import octicons from '@primer/octicons'
 
@@ -31,7 +30,8 @@ export default Vue.extend({
 <style lang="scss">
 .octicon {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: text-top;
   fill: currentColor;
+  overflow: visible;
 }
 </style>
