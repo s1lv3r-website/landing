@@ -31,9 +31,7 @@ const config: NuxtConfig = {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: (titleChunk) =>
-      titleChunk !== 'nuxt-website'
-        ? `${titleChunk} | S1LV3R`
-        : "S1LV3R",
+      titleChunk !== 'nuxt-website' ? `${titleChunk} | S1LV3R` : 'S1LV3R',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -60,8 +58,58 @@ const config: NuxtConfig = {
       { property: 'twitter:title', content: metaData.title },
       { property: 'twitter:creator', content: `@${metaData.socials.twitter}` },
       { property: 'twitter:site', content: `@${metaData.socials.twitter}` },
+
+      {
+        name: 'msapplication-TileColor',
+        content: metaData.theme,
+      },
+      {
+        name: 'msapplication-TileImage',
+        content: '/mstile-144x144.png?v=1',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/png', href: '/icon.png' }],
+    link: [
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/apple-touch-icon.png?v=1',
+      },
+      { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico?v=1' },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/favicon-32x32.png?v=1',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '194x194',
+        href: '/favicon-194x194.png?v=1',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '192x192',
+        href: '/android-chrome-192x192.png?v=1',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/favicon-16x16.png?v=1',
+      },
+      { rel: 'manifest', href: '/site.webmanifest?v=1' },
+      {
+        rel: 'mask-icon',
+        href: '/safari-pinned-tab.svg?v=1',
+        color: metaData.theme,
+      },
+      {
+        rel: 'shortcut icon',
+        href: '/favicon.ico?v=1',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -80,8 +128,6 @@ const config: NuxtConfig = {
     'nuxt-build-optimisations',
     '@nuxtjs/style-resources',
     '@nuxtjs/color-mode',
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
     '@nuxtjs/netlify-files',
     '@nuxtjs/eslint-module',
     '@nuxtjs/robots',
@@ -96,23 +142,6 @@ const config: NuxtConfig = {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],
-
-  // PWA module configuration: https://go.nuxtjs.dev/pwa
-  pwa: {
-    manifest: {
-      lang: 'en',
-    },
-    workbox: false,
-  },
-
-  // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {
-    markdown: {
-      prism: {
-        theme: 'prism-themes/themes/prism-material-oceanic.css',
-      },
-    },
-  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

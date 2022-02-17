@@ -34,7 +34,6 @@
       "@nuxt/typescript-build",
       "@types/node",
       "@types/webpack-env",
-      "@nuxtjs/pwa",
       "@nuxtjs/style-resources",
       "@nuxtjs/robots",
       "@nuxtjs/color-mode",
