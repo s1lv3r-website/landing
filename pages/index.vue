@@ -1,10 +1,6 @@
 <template>
   <div>
-    <p>
-      Hey, I'm S1LV3R. I usually do programming and CTFs, but I also enjoy
-      talking with my friends and gaming :) This website is mostly just a simple
-      page to link to other websites and stuff. <span id="cursor">▌</span>
-    </p>
+    <p>{{ frontpageText }}<CursorBlink /></p>
     <p>🏳️‍🌈 Bisexual, she/they</p>
 
     <Contact />
@@ -15,26 +11,23 @@
 import Vue from 'vue'
 
 import Contact from '@/components/index/contact.vue'
+import Typewriter from '@/components/typewriter.vue'
+import CursorBlink from '@/components/cursor.vue'
 
 export default Vue.extend({
-  components: { Contact },
+  components: { Contact, Typewriter, CursorBlink },
 
   layout: 'default',
+
+  data() {
+    return {
+      frontpageText:
+        "Hey, I'm S1LV3R. I usually do programming and CTFs, but I also enjoy talking with my friends and gaming :) This website is mostly just a simple page to link to other websites and stuff.",
+    }
+  },
 
   head: {
     title: 'Home',
   },
 })
 </script>
-
-<style lang="scss" scoped>
-#cursor {
-  animation: blinker 1.5s cubic-bezier(0.43, 0.34, 0, 1) infinite;
-}
-
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
-}
-</style>

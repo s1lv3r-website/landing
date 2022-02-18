@@ -2,7 +2,7 @@
   <div>
     <p>
       Links to stuff I've made, stuff I find interesting, or just generally
-      other things you should have a look at.
+      other things you should have a look at.<CursorBlink />
     </p>
 
     <table>
@@ -96,7 +96,11 @@
 <script lang="ts">
 import Vue from 'vue'
 
+import CursorBlink from '@/components/cursor.vue'
+
 export default Vue.extend({
+  components: { CursorBlink },
+
   head: {
     title: 'Links',
   },
