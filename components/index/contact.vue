@@ -71,4 +71,14 @@ table {
     font-weight: bold;
   }
 }
+
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  display: block !important;
+}
 </style>
