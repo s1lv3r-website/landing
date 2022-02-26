@@ -63,7 +63,6 @@ table {
 
   td,
   tr {
-    border: 1px solid #ccc;
     padding: 0.5rem;
   }
 
