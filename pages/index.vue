@@ -11,11 +11,10 @@
 import Vue from 'vue'
 
 import Contact from '@/components/index/contact.vue'
-import Typewriter from '@/components/typewriter.vue'
 import CursorBlink from '@/components/cursor.vue'
 
 export default Vue.extend({
-  components: { Contact, Typewriter, CursorBlink },
+  components: { Contact, CursorBlink },
 
   layout: 'default',
 

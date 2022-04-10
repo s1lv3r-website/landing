@@ -7,86 +7,15 @@
 
     <table>
       <tbody>
-        <tr>
+        <tr v-for="link in links" :key="link">
           <td>
-            <a
-              href="https://www.hackthebox.eu/home/users/profile/266080"
-              target="_blank"
-              rel="noopener noreferrer"
-              >HackTheBox</a
-            >
-          </td>
-          <td>My HackTheBox profile</td>
-        </tr>
-        <tr>
-          <td>
-            <a
-              href="https://github.com/CTFNote"
-              target="_blank"
-              rel="noopener noreferrer"
-              >CTFNote</a
-            >
+            <a :href="link.url" target="_blank">
+              {{ link.title }}
+            </a>
           </td>
           <td>
-            CTFNote is a notepad and tool for CTF teams to better manage and
-            organize CTFs and CTF challenges.
+            {{ link.description }}
           </td>
-        </tr>
-        <tr>
-          <td>
-            <a
-              :href="`https://github.com/${$globalVars.github_username}/dotfiles`"
-              target="_blank"
-              rel="noopener noreferrer"
-              >dotfiles</a
-            >
-          </td>
-          <td>The repo with all my dotfiles and stuff</td>
-        </tr>
-        <tr>
-          <td>
-            <a
-              href="https://corax.team"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Team Corax</a
-            >
-          </td>
-          <td>The CTF team I'm a part of.</td>
-        </tr>
-        <tr>
-          <td>
-            <a
-              href="https://nerd.s1lv3r.codes"
-              target="_blank"
-              rel="noopener noreferrer"
-              >nerd.s1lv3r.codes</a
-            >
-          </td>
-          <td>Nerd</td>
-        </tr>
-        <tr>
-          <td>
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Very cool</a>
-          </td>
-          <td>Such a cool website</td>
-        </tr>
-        <tr>
-          <td>
-            <a
-              :href="`https://github.com/${$globalVars.repo}`"
-              target="_blank"
-              rel="noopener noreferrer"
-              >{{ $globalVars.repo }}</a
-            >
-          </td>
-          <td>The GitHub repository for this website</td>
-        </tr>
-        <tr>
-          <td>
-            <a href="https://github.com/theS1LV3R">theS1LV3R</a>
-          </td>
-          <td>My GitHub page</td>
         </tr>
       </tbody>
     </table>
@@ -101,8 +30,68 @@ import CursorBlink from '@/components/cursor.vue'
 export default Vue.extend({
   components: { CursorBlink },
 
+  data() {
+    return {
+      links: [
+        {
+          title: 'HackTheBox',
+          url: 'https://www.hackthebox.eu/home/users/profile/266080',
+          description: 'My HackTheBox profile.',
+        },
+        {
+          title: 'CTFNote',
+          url: 'https://github.com/CTFNote',
+          description:
+            'CTFNote is a notepad and tool for CTF teams to better manage and organize CTFs and CTF challenges.',
+        },
+        {
+          title: 'dotfiles',
+          url: `https://github.com/${this.$globalVars.github_username}/dotfiles`,
+          description: 'The repo with all my dotfiles and stuff.',
+        },
+        {
+          title: 'Team Corax',
+          url: 'https://corax.team',
+          description: "The CTF team I'm a part of.",
+        },
+        {
+          title: 'nerd.s1lv3r.codes',
+          url: 'https://nerd.s1lv3r.codes',
+          description: 'Nerd',
+        },
+        {
+          title: 'Very cool',
+          url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+          description: 'Such a cool website',
+        },
+        {
+          title: `${this.$globalVars.repo}`,
+          url: `https://github.com/${this.$globalVars.repo}`,
+          description: 'The GitHub repository for this website',
+        },
+        {
+          title: `${this.$globalVars.github_username}`,
+          url: `https://github.com/${this.$globalVars.github_username}`,
+          description: 'My GitHub page',
+        },
+      ] as {
+        title: string
+        url: string
+        description: string
+      }[],
+    }
+  },
+
   head: {
     title: 'Links',
   },
 })
 </script>
+
+<style lang="scss" scoped>
+tr,
+td {
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+</style>

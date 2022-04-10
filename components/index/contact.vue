@@ -3,45 +3,12 @@
     <h2>Contact</h2>
     <table>
       <tbody>
-        <tr>
-          <td>GitHub</td>
+        <tr v-for="link in links" :key="link">
+          <td>{{ link.title }}</td>
           <td>
-            <a
-              :href="`https://github.com/${$globalVars.github_username}`"
-              target="_blank"
-              rel="noopener noreferrer"
-              >{{ $globalVars.github_username }}</a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td>Twitter</td>
-          <td>
-            <a
-              :href="`https://twitter.com/${$globalVars.twitter_username}`"
-              target="_blank"
-              rel="noopener noreferrer"
-              >@{{ $globalVars.twitter_username }}</a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td>Discord</td>
-          <td>
-            <a href="/discord" target="_blank" rel="noopener noreferrer">{{
-              $globalVars.discord_username
-            }}</a>
-          </td>
-        </tr>
-        <tr>
-          <td>Matrix</td>
-          <td>
-            <a
-              :href="`https://matrix.to/#/${$globalVars.matrix_username}`"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><code>{{ $globalVars.matrix_username }}</code></a
-            >
+            <a :href="link.url">
+              {{ link.linkName }}
+            </a>
           </td>
         </tr>
         <tr>
@@ -56,6 +23,42 @@
   </div>
 </template>
 
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+  data() {
+    return {
+      links: [
+        {
+          linkName: this.$globalVars.github_username,
+          url: `https://github.com/${this.$globalVars.github_username}`,
+          title: 'GitHub',
+        },
+        {
+          linkName: `@${this.$globalVars.twitter_username}`,
+          url: `https://twitter.com/${this.$globalVars.twitter_username}`,
+          title: 'Twitter',
+        },
+        {
+          linkName: this.$globalVars.discord_username,
+          url: '/discord',
+          title: 'Discord',
+        },
+        {
+          linkName: this.$globalVars.matrix_username,
+          url: `https://matrix.to/#/${this.$globalVars.matrix_username}`,
+          title: 'Matrix',
+        },
+      ] as {
+        linkName: string
+        url: string
+        title: string
+      }[],
+    }
+  },
+})
+</script>
+
 <style lang="scss" scoped>
 table {
   border-collapse: collapse;
@@ -69,15 +72,5 @@ table {
   td:first-child {
     font-weight: bold;
   }
-}
-
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-tr {
-  display: block !important;
 }
 </style>

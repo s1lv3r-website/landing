@@ -13,7 +13,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import CursorBlink from '~/components/cursor.vue'
+import CursorBlink from '@/components/cursor.vue'
 
 export default Vue.extend({
   components: { CursorBlink },

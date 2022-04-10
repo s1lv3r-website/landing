@@ -12,7 +12,7 @@
 import Vue from 'vue'
 
 import Footer from '@/components/footer.vue'
-import Header from '~/components/header.vue'
+import Header from '@/components/header.vue'
 
 export default Vue.extend({
   components: { Footer, Header },
