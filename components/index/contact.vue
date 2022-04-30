@@ -18,6 +18,12 @@
             ( <a href="/public-keys.gpg">Full key</a> )
           </td>
         </tr>
+        <tr>
+          <td>Mastodon (tech.lgbt)</td>
+          <td>
+            <a rel="me" href="https://tech.lgbt/@s1lv3r">Mastodon </a>
+          </td>
+        </tr>
       </tbody>
     </table>
   </div>
