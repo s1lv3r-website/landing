@@ -5,8 +5,9 @@
       <tbody>
         <tr v-for="link in links" :key="link">
           <td>{{ link.title }}</td>
+          <a href="http://"></a>
           <td>
-            <a :href="link.url">
+            <a :href="link.url" target="_blank" rel="noopener noreferrer">
               {{ link.linkName }}
             </a>
           </td>
@@ -21,7 +22,12 @@
         <tr>
           <td>Mastodon (tech.lgbt)</td>
           <td>
-            <a rel="me" href="https://tech.lgbt/@s1lv3r">Mastodon </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer me"
+              href="https://tech.lgbt/@s1lv3r"
+              >Mastodon
+            </a>
           </td>
         </tr>
       </tbody>
@@ -31,6 +37,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+
 export default Vue.extend({
   data() {
     return {
