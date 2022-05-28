@@ -5,7 +5,6 @@
       <tbody>
         <tr v-for="link in links" :key="link">
           <td>{{ link.title }}</td>
-          <a href="http://"></a>
           <td>
             <a :href="link.url" target="_blank" rel="noopener noreferrer">
               {{ link.linkName }}
