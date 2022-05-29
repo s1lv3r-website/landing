@@ -4,16 +4,16 @@ const metaData = {
   url: 's1lv3r.codes',
   title: 'S1LV3R',
   description:
-    "Hey, I'm S1LV3R. I usually do programming and CTFs, but I also enjoy talking with my friends and gaming :)",
-  email: 's1lv3r@corax.team',
-  theme: '#B00B69',
+    'A transfem nerd, in school to become a developer and systems engineer.',
+  email: 'me@s1lv3r.codes',
+  theme: '#434c5e',
   author: 'S1LV3R',
   locale: 'en_US',
   socials: {
     twitter: 'theS1LV3R',
     github: 'theS1LV3R',
-    discord: 'Join my server',
     matrix: '@s1lv3r:matrix.org',
+    mastodon: 'https://tech.lgbt/@s1lv3r',
   },
   git: {
     repo: 's1lv3r-website/landing',

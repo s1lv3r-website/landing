@@ -64,7 +64,7 @@ export default Vue.extend({
           title: 'Twitter',
         },
         {
-          urlText: this.$globalVars.discord_username,
+          urlText: 'Join my server',
           url: '/discord',
           title: 'Discord',
         },
@@ -76,13 +76,13 @@ export default Vue.extend({
         {
           title: 'Mastodon (tech.lgbt)',
           urlText: 'Mastodon',
-          url: 'https://tech.lgbt/@s1lv3r',
+          url: this.$globalVars.mastodon_url,
           rel: 'me',
         },
         {
           title: 'Email',
-          url: 'mailto:me@s1lv3r.codes',
-          urlText: 'me@s1lv3r.codes',
+          url: `mailto:${this.$globalVars.email}`,
+          urlText: this.$globalVars.email,
         },
       ] as {
         title: string
