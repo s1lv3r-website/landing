@@ -11,6 +11,16 @@
       <br />
       Commit date: <code>{{ commitdate }}</code>
     </p>
+    <p>
+      <a
+        href="https://app.netlify.com/sites/s1lv3r/deploys"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><img
+          src="https://api.netlify.com/api/v1/badges/f7d0d017-8ec3-4b62-81ca-47bbc8393229/deploy-status"
+          alt="Netlify Status"
+      /></a>
+    </p>
   </footer>
 </template>
 
