@@ -6,7 +6,11 @@
         <tr v-for="link in links" :key="link">
           <td>{{ link.title }}</td>
           <td>
-            <a :href="link.url" target="_blank" rel="noopener noreferrer">
+            <a
+              :href="link.url"
+              target="_blank"
+              :rel="`noopener noreferrer ${link.rel || ''}`"
+            >
               {{ link.linkName }}
             </a>
           </td>
@@ -16,17 +20,6 @@
           <td>
             85FA 2FC2 D803 5859 AE77 FF6E 6366 60BB 3A5C 2F87<br />
             ( <a href="/public-keys.gpg">Full key</a> )
-          </td>
-        </tr>
-        <tr>
-          <td>Mastodon (tech.lgbt)</td>
-          <td>
-            <a
-              target="_blank"
-              rel="noopener noreferrer me"
-              href="https://tech.lgbt/@s1lv3r"
-              >Mastodon
-            </a>
           </td>
         </tr>
       </tbody>
@@ -61,10 +54,17 @@ export default Vue.extend({
           url: `https://matrix.to/#/${this.$globalVars.matrix_username}`,
           title: 'Matrix',
         },
+        {
+          linkName: 'Mastodon',
+          title: 'Mastodon (tech.lgbt)',
+          url: 'https://tech.lgbt/@s1lv3r',
+          rel: 'me',
+        },
       ] as {
         linkName: string
         url: string
         title: string
+        rel?: string
       }[],
     }
   },
