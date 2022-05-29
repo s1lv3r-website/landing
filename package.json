@@ -4,10 +4,11 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
+    "get-variables": "NUXT_ENV_COMMIT_SHA=`git rev-parse --short HEAD` NUXT_ENV_COMMIT_MESSAGE=`git log -1 --pretty=%B` NUXT_ENV_COMMIT_DATE=`git log -1 --pretty=%ci`",
+    "dev": "yarn run get-variables nuxt",
+    "build": "yarn run get-variables nuxt build",
+    "generate": "yarn run get-variables nuxt generate",
     "start": "nuxt start",
-    "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue,.ts\" --ignore-path .gitignore .",
     "lint": "yarn lint:js"
   },

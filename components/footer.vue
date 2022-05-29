@@ -2,11 +2,15 @@
   <footer>
     <!--    <a :href="url" target="_blank" rel="noopener noreferrer">
       <Octicon icon="pencil" /> Edit on GitHub!
-    </a>
+    </a>-->
     <p>
-      Last commit: <code>{{$gitInfo.shorthash}}</code> - <code></code> <br />
-      Commit date:
-    </p> -->
+      Last commit:
+      <a :href="commitUrl" target="_blank" rel="noopener noreferrer"
+        ><code>{{ commitsha }}</code> - <code>{{ commitmessage }}</code></a
+      >
+      <br />
+      Commit date: <code>{{ commitdate }}</code>
+    </p>
   </footer>
 </template>
 
@@ -18,6 +22,14 @@ import Octicon from '@/components/octicon.vue'
 export default Vue.extend({
   components: { Octicon },
 
+  data() {
+    return {
+      commitsha: process.env.NUXT_ENV_COMMIT_SHA,
+      commitmessage: process.env.NUXT_ENV_COMMIT_MESSAGE,
+      commitdate: process.env.NUXT_ENV_COMMIT_DATE,
+    }
+  },
+
   computed: {
     url() {
       return `https://github.com/${this.$globalVars.repo}/blob/${
@@ -25,6 +37,9 @@ export default Vue.extend({
       }/pages/${
         this.$route.path.slice(-1) === '/' ? 'index' : this.$route.path
       }.vue`
+    },
+    commitUrl() {
+      return `https://github.com/${this.$globalVars.repo}/commit/${process.env.NUXT_ENV_COMMIT_SHA}`
     },
   },
 })
