@@ -24,7 +24,7 @@
             {{ link.urlText }}
           </a>
         </div>
-        <div class="contaxt-item">
+        <div class="contact-item">
           <h4>PGP</h4>
           <p>
             85FA 2FC2 D803 5859 AE77 FF6E 6366 60BB 3A5C 2F87<br />
