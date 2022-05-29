@@ -54,6 +54,12 @@ export default Vue.extend({
     return {
       links: [
         {
+          title: 'Pronouns.page',
+          url: 'https://en.pronouns.page/@s1lv3r',
+          urlText: 'https://en.pronouns.page/@s1lv3r',
+          rel: 'me',
+        },
+        {
           urlText: this.$globalVars.github_username,
           url: `https://github.com/${this.$globalVars.github_username}`,
           title: 'GitHub',
