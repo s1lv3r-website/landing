@@ -13,29 +13,25 @@
 
     <div>
       <h2>How to contact me</h2>
-      <table>
-        <tbody>
-          <tr v-for="link in links" :key="link.url">
-            <td>{{ link.title }}</td>
-            <td>
-              <a
-                :href="link.url"
-                target="_blank"
-                :rel="`noopener noreferrer ${link.rel || ''}`"
-              >
-                {{ link.urlText }}
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>PGP</td>
-            <td>
-              85FA 2FC2 D803 5859 AE77 FF6E 6366 60BB 3A5C 2F87<br />
-              ( <a href="/public-keys.gpg">Full key</a> )
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div id="contact-links">
+        <div v-for="link in links" :key="link.url" class="contact-item">
+          <h4>{{ link.title }}</h4>
+          <a
+            :href="link.url"
+            target="_blank"
+            :rel="`noopener noreferrer ${link.rel || ''}`"
+          >
+            {{ link.urlText }}
+          </a>
+        </div>
+        <div class="contaxt-item">
+          <h4>PGP</h4>
+          <p>
+            85FA 2FC2 D803 5859 AE77 FF6E 6366 60BB 3A5C 2F87<br />
+            ( <a href="/public-keys.gpg">Full key</a> )
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -117,6 +113,21 @@ table {
 
   td:first-child {
     font-weight: bold;
+  }
+}
+
+#contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .contact-item {
+    margin: 0.5rem;
+  }
+
+  h4 {
+    margin: 0.25rem;
+    margin-left: 0;
   }
 }
 </style>
