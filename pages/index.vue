@@ -10,7 +10,13 @@
       <li>🏳‍⚧ I am trans and use she/they pronouns</li>
       <li>I am neurodivergent (autistic)</li>
     </ul>
-
+    <p id="nordfan">
+      I am also a big fan of the
+      <a href="https://nordtheme.com" target="_blank" rel="noopener noreferrer"
+        >Nord</a
+      >
+      color scheme
+    </p>
     <div>
       <h2>How to contact me</h2>
       <div id="contact-links">
@@ -129,5 +135,9 @@ table {
     margin: 0.25rem;
     margin-left: 0;
   }
+}
+
+#nordfan {
+  font-style: italic;
 }
 </style>
