@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>
-      A transfem nerd, in school to become a developer and systems
+      Autistic transfem nerd, in school to become a developer and systems
       engineer.<CursorBlink />
     </p>
     <p>Some fun facts about me:</p>
