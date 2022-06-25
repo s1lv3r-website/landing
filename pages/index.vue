@@ -57,8 +57,8 @@ export default Vue.extend({
       links: [
         {
           title: 'Pronouns.page',
-          url: 'https://en.pronouns.page/@s1lv3r',
-          urlText: 'https://en.pronouns.page/@s1lv3r',
+          url: 'https://pronouns.page/u/s1lv3r',
+          urlText: 'https://pronouns.page/u/s1lv3r',
           rel: 'me',
         },
         {
