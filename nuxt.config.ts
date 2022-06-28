@@ -4,7 +4,7 @@ const metaData = {
   url: 's1lv3r.codes',
   title: 'S1LV3R',
   description:
-    'A transfem nerd, in school to become a developer and systems engineer.',
+    'Autistic transfem nerd, in school to become a developer and systems engineer.',
   email: 'me@s1lv3r.codes',
   theme: '#434c5e',
   author: 'S1LV3R',
