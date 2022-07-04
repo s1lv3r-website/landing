@@ -8,7 +8,12 @@
     <ul>
       <li>🏳️‍🌈 I am bisexual</li>
       <li>🏳‍⚧ I am trans and use she/they pronouns</li>
-      <li>I am neurodivergent (autistic)</li>
+      <li>
+        <span id="asd">
+          <AsdSymbol /> I am neurodivergent (autistic). Highly interested in
+          everything computers, servers, and generally technical
+        </span>
+      </li>
     </ul>
     <p id="nordfan">
       I am also a big fan of the
@@ -46,9 +51,10 @@
 import Vue from 'vue'
 
 import CursorBlink from '@/components/cursor.vue'
+import AsdSymbol from '@/components/asd-symbol.vue'
 
 export default Vue.extend({
-  components: { CursorBlink },
+  components: { CursorBlink, AsdSymbol },
 
   layout: 'default',
 
@@ -139,5 +145,23 @@ table {
 
 #nordfan {
   font-style: italic;
+}
+
+li, ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#asd {
+  display: flex;
+  align-items: baseline;
+  & > svg {
+    display: inline;
+    max-height: 0.8rem;
+    max-width: 1.3rem;
+    padding-top: 0.1rem;
+    margin: auto 0;
+    margin-right: 0.5rem;
+  }
 }
 </style>
