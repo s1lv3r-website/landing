@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="foot">
     <!--    <a :href="url" target="_blank" rel="noopener noreferrer">
       <Octicon icon="pencil" /> Edit on GitHub!
     </a>-->
@@ -17,8 +17,9 @@
         target="_blank"
         rel="noopener noreferrer"
         ><img
-          src="https://api.netlify.com/api/v1/badges/f7d0d017-8ec3-4b62-81ca-47bbc8393229/deploy-status"
+          src="https://img.shields.io/netlify/f7d0d017-8ec3-4b62-81ca-47bbc8393229?logo=netlify&style=flat-square"
           alt="Netlify Status"
+          loading="lazy"
       /></a>
     </p>
   </footer>
@@ -82,6 +83,13 @@ footer {
     .octicon {
       vertical-align: baseline;
     }
+  }
+
+  transition: ease-in-out 0.2s;
+  filter: brightness(50%);
+  text-align: center;
+  &:hover {
+    filter: brightness(100%);
   }
 }
 </style>

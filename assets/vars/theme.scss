@@ -19,7 +19,7 @@ $linkActiveColor: #b00b69;
 
 @font-face {
   font-family: 'Consolas';
-  src: local('Consolas') url('/fonts/Consolas.ttf') format('truetype');
+  src: local('Consolas'), url('/fonts/Consolas.ttf') format('truetype');
 }
 
 $bodyFont: 'Consolas', -apple-system, BlinkMacSystemFont, monospace, 'Apple Color Emoji',
