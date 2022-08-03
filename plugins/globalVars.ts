@@ -29,7 +29,7 @@ const vars: globalVars = {
   twitter_username: 'theS1LV3R',
   discord_username: 'Join my server',
   matrix_username: '@s1lv3r:matrix.org',
-  mastodon_url: 'https://tech.lgbt/@s1lv3r',
+  mastodon_url: 'https://lgbt.pm/@zoe',
   repo: 's1lv3r-website/landing',
   branch: 'master',
 }

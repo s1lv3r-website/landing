@@ -88,7 +88,7 @@ export default Vue.extend({
           title: 'Matrix',
         },
         {
-          title: 'Mastodon (tech.lgbt)',
+          title: 'Mastodon (lgbt.pm)',
           urlText: 'Mastodon',
           url: this.$globalVars.mastodon_url,
           rel: 'me',
