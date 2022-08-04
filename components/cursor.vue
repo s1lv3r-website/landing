@@ -1,4 +1,4 @@
-<template><span id="cursor">█</span></template>
+<template><span id="cursor" aria-hidden="true">█</span></template>
 
 <style lang="scss" scoped>
 #cursor {

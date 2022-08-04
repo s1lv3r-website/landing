@@ -6,6 +6,7 @@
     width="788.901"
     height="482.60999"
     xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
   >
     <g transform="translate(-1.641,-64.751)">
       <g>

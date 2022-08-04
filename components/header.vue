@@ -2,10 +2,11 @@
   <header>
     <h1>S1LV3R</h1>
     <div id="flex-right">
-      <div id="theme-select" @click="cycleTheme">
+      <div id="theme-select" role="button" @click="cycleTheme">
         <component
           :is="themeButtons[activeTheme].icon"
           id="theme-icon"
+          aria-hidden="true"
         ></component>
         <p>{{ themeButtons[activeTheme].theme }}</p>
       </div>
