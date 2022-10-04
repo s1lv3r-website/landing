@@ -6,7 +6,7 @@ export type globalVars = {
   twitter_username: string
   discord_username: string
   matrix_username: string
-  mastodon_url: string
+  fedi_url: string
   repo: string
   branch: string
 }
@@ -29,7 +29,7 @@ const vars: globalVars = {
   twitter_username: 'theS1LV3R',
   discord_username: 'Join my server',
   matrix_username: '@s1lv3r:matrix.org',
-  mastodon_url: 'https://lgbt.pm/@zoe',
+  fedi_url: 'https://snug.moe/@zoe',
   repo: 's1lv3r-website/landing',
   branch: 'master',
 }
